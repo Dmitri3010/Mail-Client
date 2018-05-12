@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MailClient.IMap.Proxy</RootNamespace>
     <AssemblyName>MailClient.IMap.Proxy</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,7 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MailClient.DAL\MailClient.DAL.csproj">
+    <ProjectReference Include="..\..\MailClient.DAL\MailClient.DAL.csproj">
       <Project>{d7b521f9-b01f-485e-8195-b2e32c893b74}</Project>
       <Name>MailClient.DAL</Name>
     </ProjectReference>

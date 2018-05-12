@@ -34,23 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Auth0.OidcClient, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Auth0.OidcClient.WPF.1.2.0\lib\net452\Auth0.OidcClient.dll</HintPath>
-    </Reference>
-    <Reference Include="Auth0.Windows, Version=0.7.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Auth0.WinformsOrWPF.0.9.0\lib\net40\Auth0.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
-    </Reference>
-    <Reference Include="EASendMail45, Version=7.3.1.9, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
-      <HintPath>..\packages\EASendMail.7.3.1.9\lib\net45\EASendMail45.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -70,9 +58,6 @@
     <Reference Include="MahApps.Metro, Version=1.6.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.6.1\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
-    <Reference Include="MailKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
-      <HintPath>..\packages\MailKit.2.0.3\lib\net45\MailKit.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
@@ -91,17 +76,8 @@
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="MimeKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
-      <HintPath>..\packages\MimeKit.2.0.3\lib\net45\MimeKit.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenPop, Version=2.0.6.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OpenPop.2.0.6.2\lib\net20\OpenPop.dll</HintPath>
-    </Reference>
-    <Reference Include="Pop3, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e33d940baacd0f37, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pop3.2.2.0\lib\net40\Pop3.dll</HintPath>
     </Reference>
     <Reference Include="S22.Imap, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\S22.Imap.3.6.0.0\lib\net40\S22.Imap.dll</HintPath>
@@ -276,21 +252,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\email.png" />
+    <Resource Include="Icons\email.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\mail.png" />
+    <Resource Include="Icons\mail.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MailClient.DAL\MailClient.DAL.csproj">
       <Project>{d7b521f9-b01f-485e-8195-b2e32c893b74}</Project>
       <Name>MailClient.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MailClient.IMap.Proxy\MailClient.IMap.Proxy.csproj">
+    <ProjectReference Include="..\IMap\MailClient.IMap.Proxy\MailClient.IMap.Proxy.csproj">
       <Project>{b7292f94-3e5c-4e15-87ff-0e0540cd4403}</Project>
       <Name>MailClient.IMap.Proxy</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MailClient.IMap\MailClient.IMap.csproj">
+    <ProjectReference Include="..\IMap\MailClient.IMap\MailClient.IMap.csproj">
       <Project>{c8416f4d-25a1-41fa-9207-56e08d328501}</Project>
       <Name>MailClient.IMap</Name>
     </ProjectReference>
@@ -299,15 +275,15 @@
     <Resource Include="License\License_rus.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\refresh.png" />
-    <Resource Include="icons\trash.png" />
+    <Resource Include="Icons\refresh.png" />
+    <Resource Include="Icons\trash.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="License\License_eng.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\new mail.png" />
-    <Resource Include="icons\print.png" />
+    <Resource Include="Icons\new mail.png" />
+    <Resource Include="Icons\print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

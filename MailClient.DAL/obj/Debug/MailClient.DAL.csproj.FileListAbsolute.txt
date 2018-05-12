@@ -11,3 +11,14 @@ C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.G
 C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.dll
 C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.pdb
+D:\Projects\Mail-Client\MailClient.DAL\bin\Debug\MailClient.DAL.dll.config
+D:\Projects\Mail-Client\MailClient.DAL\bin\Debug\MailClient.DAL.dll
+D:\Projects\Mail-Client\MailClient.DAL\bin\Debug\MailClient.DAL.pdb
+D:\Projects\Mail-Client\MailClient.DAL\bin\Debug\EntityFramework.xml
+D:\Projects\Mail-Client\MailClient.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.csprojResolveAssemblyReference.cache
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.Migrations.Initial.resources
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.GenerateResource.Cache
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.CoreCompileInputs.cache
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.dll
+D:\Projects\Mail-Client\MailClient.DAL\obj\Debug\MailClient.DAL.pdb
