@@ -1,0 +1,17 @@
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\obj\Debug\MailClient.Proxy.csprojResolveAssemblyReference.cache
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\obj\Debug\MailClient.Proxy.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.Proxy.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.Proxy.pdb
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\AutoMapper.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.DAL.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.IMap.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\EntityFramework.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\S22.Imap.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.DAL.pdb
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.DAL.dll.config
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\MailClient.IMap.pdb
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\AutoMapper.xml
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\EntityFramework.xml
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\bin\Debug\S22.Imap.xml
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\obj\Debug\MailClient.Proxy.dll
+C:\Users\Dima\source\repos\mail\MailClient.Proxy\obj\Debug\MailClient.Proxy.pdb

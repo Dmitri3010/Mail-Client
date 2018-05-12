@@ -1,0 +1,30 @@
+﻿<Window x:Class="MailClient.Forms.NewMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailClient"
+        mc:Ignorable="d"
+        Title="NewMessage" Height="500" Width="500">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+        <Label Content="Новое письмо" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="193" FontSize="24"/>
+        <TextBox x:Name="emailsenderTB" HorizontalAlignment="Left" Height="23" Margin="162,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+        <TextBox x:Name="NamesenderTB" HorizontalAlignment="Left" Height="23" Margin="162,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+        <TextBox x:Name="SendToTB" HorizontalAlignment="Left" Height="23" Margin="162,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+        <TextBox x:Name="SubjectTB" HorizontalAlignment="Left" Height="23" Margin="162,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+        <Label Content="email отправителя" HorizontalAlignment="Left" Margin="34,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Имя отправителя" HorizontalAlignment="Left" Margin="34,105,0,0" VerticalAlignment="Top"/>
+        <Label Content="кому отправить?" HorizontalAlignment="Left" Margin="34,145,0,0" VerticalAlignment="Top"/>
+        <Label Content="тема письма" HorizontalAlignment="Left" Margin="34,189,0,0" VerticalAlignment="Top"/>
+        <Label Content="Письмо" HorizontalAlignment="Left" Margin="34,238,0,0" VerticalAlignment="Top"/>
+        <RichTextBox x:Name="BodyTB" HorizontalAlignment="Left" Height="100" Margin="91,238,0,0" VerticalAlignment="Top" Width="354" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Отправить" HorizontalAlignment="Left" Margin="203,383,0,0" VerticalAlignment="Top" Width="166" Height="48" Click="Button_Click"/>
+
+    </Grid>
+</Window>

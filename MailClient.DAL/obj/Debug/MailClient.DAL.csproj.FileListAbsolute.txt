@@ -1,0 +1,13 @@
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\MailClient.DAL.dll.config
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\MailClient.DAL.dll
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\MailClient.DAL.pdb
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Dima\source\repos\mail\MailClient.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.Migrations.Initial.resources
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.GenerateResource.Cache
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.dll
+C:\Users\Dima\source\repos\mail\MailClient.DAL\obj\Debug\MailClient.DAL.pdb
