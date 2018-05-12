@@ -11,15 +11,17 @@ using System.Threading.Tasks;
 using MailClient.Models;
 using MailClient.DAL.Entities;
 using mail.Forms;
-using MailClient.Proxy.Interfaces;
 using MailClient.IMap.Models;
+using MailClient.IMap.Interfaces;
+using MailClient.DAL.Interfaces;
 
 namespace MailClient.Forms
 {
     public partial class Main : Window
     {
         private IMapper _mapper;
-        private IUnitOfWorkProxy _proxy;
+        private IUnitOfWork _database;
+        private IClientService _clientService;
 
         private List<MessageModel> messages;
 
@@ -28,16 +30,17 @@ namespace MailClient.Forms
             InitializeComponent();
 
             _mapper = AutoMapperProvider.GetIMapper();
-            _proxy = ProxyProvider.GetProxy();
+            _database = ApplicationProvider.GetUnitOfWork();
+            _clientService = ApplicationProvider.GetProxy();
 
             Show();
-            SetIcons();
+            //SetIcons();
             Configure();
         }
 
         private void Configure()
         {
-            if (!_proxy.MessageRepositoryProxy.IsAnyUserLoggedIn())
+            if (!_clientService.IsAnyUserLoggedIn())
             {
                 CheckForUsersInDatabaseAndOpenHandlerWindow();
                 return;
@@ -46,7 +49,7 @@ namespace MailClient.Forms
 
         private void CheckForUsersInDatabaseAndOpenHandlerWindow()
         {
-            IEnumerable<User> users = _proxy.UserRepository.GetAll();
+            IEnumerable<User> users = _database.UserRepository.GetAll();
             if (users.Count() == 0)
             {
                 OpenLoginWindow();
@@ -104,7 +107,7 @@ namespace MailClient.Forms
 
         private async void GetAllMessages(object sender, RoutedEventArgs e)
         {
-            if (!_proxy.MessageRepositoryProxy.IsAnyUserLoggedIn())
+            if (!_clientService.IsAnyUserLoggedIn())
             {
                 Configure();
                 return;
@@ -118,46 +121,46 @@ namespace MailClient.Forms
 
         private List<ShortenMessageModel> GetAllMessages()
         {
-            var mail = _proxy.MessageRepositoryProxy.GetAllMessages()
+            var mail = _clientService.GetAllMessages()
                 .OrderByDescending(m => m.Date)
                 .ToList();
-            messages = _mapper.Map<List<Message>, List<MessageModel>>(mail);
+            messages = _mapper.Map<List<MailModel>, List<MessageModel>>(mail);
             return _mapper.Map<List<MessageModel>, List<ShortenMessageModel>>(messages);
         }
 
         private List<ShortenMessageModel> GetDeletedMessages()
         {
-            var mail = _proxy.MessageRepositoryProxy.GetDeletedMessages()
+            var mail = _clientService.GetDeletedMessages()
                 .OrderByDescending(m => m.Date)
                 .ToList();
-            var messages = _mapper.Map<List<Message>, List<MessageModel>>(mail);
+            var messages = _mapper.Map<List<MailModel>, List<MessageModel>>(mail);
             return _mapper.Map<List<MessageModel>, List<ShortenMessageModel>>(messages);
         }
 
         private List<ShortenMessageModel> GetSentMessages()
         {
-            var mail = _proxy.MessageRepositoryProxy.GetSentMessages()
+            var mail = _clientService.GetSentMessages()
                 .OrderByDescending(m => m.Date)
                 .ToList();
-            var messages = _mapper.Map<List<Message>, List<MessageModel>>(mail);
+            var messages = _mapper.Map<List<MailModel>, List<MessageModel>>(mail);
             return _mapper.Map<List<MessageModel>, List<ShortenMessageModel>>(messages);
         }
 
         private List<ShortenMessageModel> GetUnseenMessages()
         {
-            var mail = _proxy.MessageRepositoryProxy.GetUnseenMessages()
+            var mail = _clientService.GetUnseenMessages()
                 .OrderByDescending(m => m.Date)
                 .ToList();
-            var messages = _mapper.Map<List<Message>, List<MessageModel>>(mail);
+            var messages = _mapper.Map<List<MailModel>, List<MessageModel>>(mail);
             return _mapper.Map<List<MessageModel>, List<ShortenMessageModel>>(messages);
         }
 
         private List<ShortenMessageModel> GetSpamMessages()
         {
-            var mail = _proxy.MessageRepositoryProxy.GetSpamMessages()
+            var mail = _clientService.GetSpamMessages()
                 .OrderByDescending(m => m.Date)
                 .ToList();
-            var messages = _mapper.Map<List<Message>, List<MessageModel>>(mail);
+            var messages = _mapper.Map<List<MailModel>, List<MessageModel>>(mail);
             return _mapper.Map<List<MessageModel>, List<ShortenMessageModel>>(messages);
         }
 

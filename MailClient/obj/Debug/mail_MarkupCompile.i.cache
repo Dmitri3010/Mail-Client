@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Dima\source\repos\mail\mail\obj\Debug\
+D:\Projects\Mail-Client\MailClient\obj\Debug\
 mail
 none
 false
 DEBUG;TRACE
-C:\Users\Dima\source\repos\mail\mail\App.xaml
+D:\Projects\Mail-Client\MailClient\App.xaml
 6-106631804
 
-19170148701
-119-1050396303
+1932871189
+1191333606960
 Forms\EnterPasswordWindow.xaml;Forms\LicenseWindow.xaml;Forms\LoginWindow.xaml;Forms\Main.xaml;Forms\NewMessage.xaml;Forms\SearchWindow.xaml;
 
-False
+True
 

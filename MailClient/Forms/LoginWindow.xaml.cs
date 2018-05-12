@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using MailClient.DAL.Entities;
-using MailClient.IMap.Models;
-using MailClient.Proxy.Interfaces;
+using MailClient.IMap.Interfaces;
 using MailClient.Singletons;
 using System;
 using System.Windows;
@@ -11,13 +9,13 @@ namespace MailClient.Forms
     public partial class LoginWindow : Window
     {
         private readonly IMapper _mapper;
-        private readonly IUnitOfWorkProxy _proxy;
+        private readonly IClientService _clientService;
 
         public LoginWindow()
         {
             InitializeComponent();
             _mapper = AutoMapperProvider.GetIMapper();
-            _proxy = ProxyProvider.GetProxy();
+            _clientService = ApplicationProvider.GetProxy();
         }
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
@@ -29,7 +27,6 @@ namespace MailClient.Forms
 
             if (isSucseeded)
             {
-                AddUserToDatabase(HostnameInput.Text, LoginInput.Text);
                 Close();
             }
         }
@@ -38,8 +35,8 @@ namespace MailClient.Forms
         {
             try
             {
-                _proxy.MessageRepositoryProxy.Login(hostname, username, password);
-                _proxy.MessageRepositoryProxy.SwitchAccount(username);
+                _clientService.Login(hostname, username, password);
+                _clientService.SwitchAccount(username);
             }
             catch(Exception e)
             {
@@ -47,21 +44,6 @@ namespace MailClient.Forms
                 return false;
             }
             return true;
-        }
-
-        private void AddUserToDatabase(string hostname, string username)
-        {
-            ApplicationUser user = GetUserModel(hostname, username);
-            _proxy.UserRepository.Add(_mapper.Map<ApplicationUser, User>(user));
-        }
-
-        private ApplicationUser GetUserModel(string hostname, string username)
-        {
-            return new ApplicationUser
-            {
-                Username = username,
-                Hostname = hostname
-            };
         }
     }
 }

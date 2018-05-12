@@ -1,5 +1,5 @@
-﻿using MailClient.IMap.Models;
-using MailClient.Proxy.Interfaces;
+﻿using MailClient.IMap.Interfaces;
+using MailClient.IMap.Models;
 using MailClient.Singletons;
 using System;
 using System.Windows;
@@ -9,14 +9,14 @@ namespace MailClient.Forms
 {
     public partial class EnterPasswordWindow : Window
     {
-        private readonly IUnitOfWorkProxy _proxy;
+        private readonly IClientService _clientService;
         private ApplicationUser _user;
 
         public EnterPasswordWindow(ApplicationUser user)
         {
             InitializeComponent();
             _user = user;
-            _proxy = ProxyProvider.GetProxy();
+            _clientService = ApplicationProvider.GetProxy();
 
             HostameLable.Content = _user.Hostname;
             UsernameLable.Content = _user.Username;
@@ -39,8 +39,8 @@ namespace MailClient.Forms
         {
             try
             {
-                _proxy.MessageRepositoryProxy.Login(hostname, username, password);
-                _proxy.MessageRepositoryProxy.SwitchAccount(username);
+                _clientService.Login(hostname, username, password);
+                _clientService.SwitchAccount(username);
             }
             catch (Exception e)
             {

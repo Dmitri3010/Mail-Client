@@ -23,6 +23,12 @@ namespace MailClient.Util
             CreateMap<Message, MessageModel>()
                 .ReverseMap();
 
+            CreateMap<MailModel, MessageModel>()
+                .ReverseMap();
+
+            CreateMap<MessageModel, MailModel>()
+                .ReverseMap();
+
             CreateMap<MailModel, Message>()
                 .ReverseMap();
 

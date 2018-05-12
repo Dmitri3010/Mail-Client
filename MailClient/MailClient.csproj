@@ -286,13 +286,13 @@
       <Project>{d7b521f9-b01f-485e-8195-b2e32c893b74}</Project>
       <Name>MailClient.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MailClient.IMap.Proxy\MailClient.IMap.Proxy.csproj">
+      <Project>{b7292f94-3e5c-4e15-87ff-0e0540cd4403}</Project>
+      <Name>MailClient.IMap.Proxy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MailClient.IMap\MailClient.IMap.csproj">
       <Project>{c8416f4d-25a1-41fa-9207-56e08d328501}</Project>
       <Name>MailClient.IMap</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MailClient.Proxy\MailClient.Proxy.csproj">
-      <Project>{08c9b9bc-9763-4098-806a-c25a2c4a40b4}</Project>
-      <Name>MailClient.Proxy</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

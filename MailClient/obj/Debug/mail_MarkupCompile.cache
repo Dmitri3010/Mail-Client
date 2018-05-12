@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\projects\Mail Client\mail\mail\obj\Debug\
+D:\Projects\Mail-Client\MailClient\obj\Debug\
 mail
 none
 false
 DEBUG;TRACE
-E:\projects\Mail Client\mail\mail\App.xaml
+D:\Projects\Mail-Client\MailClient\App.xaml
 6-106631804
 
-19170148701
-119-830688144
+151566628090
+1181690580327
 Forms\EnterPasswordWindow.xaml;Forms\LicenseWindow.xaml;Forms\LoginWindow.xaml;Forms\Main.xaml;Forms\NewMessage.xaml;Forms\SearchWindow.xaml;
 
 True

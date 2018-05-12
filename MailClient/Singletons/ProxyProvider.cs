@@ -1,29 +1,43 @@
 ﻿using AutoMapper;
 using MailClient.DAL.EF;
-using MailClient.Proxy;
-using MailClient.Proxy.Interfaces;
+using MailClient.DAL.Interfaces;
+using MailClient.DAL.Repositories;
+using MailClient.IMap.Interfaces;
+using MailClient.IMap.Proxy;
 
 namespace MailClient.Singletons
 {
-    public class ProxyProvider
+    public class ApplicationProvider
     {
-        private static ProxyProvider provider;
-        private IUnitOfWorkProxy proxy;
+        private static ApplicationProvider provider;
+        private readonly IUnitOfWork unitOfWork;
+        private readonly IClientService clientService;
 
-        private ProxyProvider()
+        private ApplicationProvider()
         {
-            ApplicationContext context = new ApplicationContext();
             IMapper mapper = AutoMapperProvider.GetIMapper();
-            proxy = new UnitOfWorkProxy(mapper, context);
+
+            ApplicationContext context = new ApplicationContext();
+            unitOfWork = new UnitOfWork(context);
+            clientService = new ClientServiceProxy(mapper, unitOfWork);
         }
 
-        public static IUnitOfWorkProxy GetProxy()
+        public static IClientService GetProxy()
         {
             if (provider == null)
             {
-                provider = new ProxyProvider();
+                provider = new ApplicationProvider();
             }
-            return provider.proxy;
+            return provider.clientService;
+        }
+
+        public static IUnitOfWork GetUnitOfWork() 
+        {
+            if (provider == null)
+            {
+                provider = new ApplicationProvider();
+            }
+            return provider.unitOfWork;
         }
     }
 }

@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient", "mail\MailClient.csproj", "{106B4F46-3440-4586-BA82-7176A63C5996}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient", "MailClient\MailClient.csproj", "{106B4F46-3440-4586-BA82-7176A63C5996}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient.DAL", "MailClient.DAL\MailClient.DAL.csproj", "{D7B521F9-B01F-485E-8195-B2E32C893B74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient.Proxy", "MailClient.Proxy\MailClient.Proxy.csproj", "{08C9B9BC-9763-4098-806A-C25A2C4A40B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient.IMap", "MailClient.IMap\MailClient.IMap.csproj", "{C8416F4D-25A1-41FA-9207-56E08D328501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient.IMap.Proxy", "MailClient.IMap.Proxy\MailClient.IMap.Proxy.csproj", "{B7292F94-3E5C-4E15-87FF-0E0540CD4403}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C8416F4D-25A1-41FA-9207-56E08D328501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8416F4D-25A1-41FA-9207-56E08D328501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8416F4D-25A1-41FA-9207-56E08D328501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7292F94-3E5C-4E15-87FF-0E0540CD4403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7292F94-3E5C-4E15-87FF-0E0540CD4403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7292F94-3E5C-4E15-87FF-0E0540CD4403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7292F94-3E5C-4E15-87FF-0E0540CD4403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

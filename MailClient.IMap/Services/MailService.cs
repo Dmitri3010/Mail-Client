@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MailClient.IMap.Interfaces;
 using MailClient.IMap.Models;
 using S22.Imap;
 using System;
@@ -8,7 +9,7 @@ using System.Net.Mail;
 
 namespace MailClient.IMap.Services
 {
-    public class MailService
+    public class MailService : IMailService
     {
         private readonly IMapper _mapper;
         private readonly ApplicationUser _user;

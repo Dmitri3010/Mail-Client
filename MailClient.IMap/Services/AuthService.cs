@@ -2,34 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using S22.Imap;
+using MailClient.IMap.Interfaces;
 
 namespace MailClient.IMap.Services
 {
-    public class AuthService
-    {
+    public class AuthService : IAuthService {
         protected List<ApplicationUser> users;
 
-        public AuthService()
-        {
+        public AuthService() {
             users = new List<ApplicationUser>();
         }
 
-        public bool IsAnyUserLoggedIn()
-        {
+        public bool IsAnyUserLoggedIn() {
             return users.Count > 0;
         }
 
-        public void AddApplicationUserProfile(string hostname, string username, string password)
-        {
+        public void Login(string hostname, string username, string password) {
             ApplicationUser user = GetApplicationUserModel(hostname, username, password);
             users.Add(user);
         }
 
-        public void RemoveApplicationUserProfile(string username)
-        {
+        public void Logout(string username) {
             ApplicationUser user = users.FirstOrDefault(u => u.Username.Equals(username));
-            if (user != null)
-            {
+            if (user != null) {
                 users.Remove(user);
             }
         }
@@ -37,6 +32,11 @@ namespace MailClient.IMap.Services
         public ApplicationUser GetApplicationUserProfile(string username)
         {
             return users.FirstOrDefault(u => u.Username.Equals(username));
+        }
+
+        public List<string> GetUsernamesOfAllUsersLoggedIn() 
+        {
+            return users.Select(u => u.Username).ToList();
         }
 
         private ApplicationUser GetApplicationUserModel(string hostname, string username, string password)
