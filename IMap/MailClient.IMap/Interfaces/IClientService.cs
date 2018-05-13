@@ -1,7 +1,5 @@
-﻿using MailClient.IMap.Models;
-
-namespace MailClient.IMap.Interfaces {
-    public interface IClientService : IAuthService, IMailService {
+﻿namespace MailClient.Imap.Interfaces {
+    public interface IClientService : IImapAuthService, IMailService {
         void SwitchAccount(string username);
     }
 }

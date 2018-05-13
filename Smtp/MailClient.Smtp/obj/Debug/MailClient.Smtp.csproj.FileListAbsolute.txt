@@ -1,0 +1,8 @@
+D:\Projects\Mail-Client\MailClient.Smtp\bin\Debug\MailClient.Smtp.dll
+D:\Projects\Mail-Client\MailClient.Smtp\bin\Debug\MailClient.Smtp.pdb
+D:\Projects\Mail-Client\MailClient.Smtp\bin\Debug\MailClinet.Implementation.dll
+D:\Projects\Mail-Client\MailClient.Smtp\bin\Debug\MailClinet.Implementation.pdb
+D:\Projects\Mail-Client\MailClient.Smtp\obj\Debug\MailClient.Smtp.csprojResolveAssemblyReference.cache
+D:\Projects\Mail-Client\MailClient.Smtp\obj\Debug\MailClient.Smtp.csproj.CoreCompileInputs.cache
+D:\Projects\Mail-Client\MailClient.Smtp\obj\Debug\MailClient.Smtp.dll
+D:\Projects\Mail-Client\MailClient.Smtp\obj\Debug\MailClient.Smtp.pdb

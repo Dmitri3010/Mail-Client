@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MailClinet.Implementation.Models;
+using System;
 
-namespace MailClient.IMap.Models
+namespace MailClient.Imap.Models
 {
-    public class MailModel
+    public class MailModel : IMailModel
     {
         public string From { get; set; }
+
+        public string To { get; set; }
 
         public string Subject { get; set; }
 

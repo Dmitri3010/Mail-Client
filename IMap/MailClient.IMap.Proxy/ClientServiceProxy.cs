@@ -1,15 +1,15 @@
-﻿using MailClient.IMap.Interfaces;
+﻿using MailClient.Imap.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MailClient.IMap.Models;
+using MailClient.Imap.Models;
 using MailClient.DAL.Interfaces;
 using AutoMapper;
-using MailClient.IMap.Services;
+using MailClient.Imap.Services;
 using S22.Imap;
 using MailClient.DAL.Entities;
 
-namespace MailClient.IMap.Proxy {
+namespace MailClient.Imap.Proxy {
     public class ClientServiceProxy : IClientService {
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _database;
@@ -18,10 +18,10 @@ namespace MailClient.IMap.Proxy {
         public ClientServiceProxy(IMapper mapper, IUnitOfWork unitOfWork) {
             _mapper = mapper;
             _database = unitOfWork;
-            _clientService = new ClientService(_mapper);
+            _clientService = new ImapClientService(_mapper);
         }
 
-        public ApplicationUser User => _clientService.User;
+        public ImapUser User => _clientService.User;
 
         private bool CheckForUpdateNeeded() {
             return _database.MessageRepository.Query().Count() == 0;
@@ -62,7 +62,7 @@ namespace MailClient.IMap.Proxy {
             return mail;
         }
 
-        public ApplicationUser GetApplicationUserProfile(string username) {
+        public ImapUser GetApplicationUserProfile(string username) {
             return _clientService.GetApplicationUserProfile(username);
         }
 

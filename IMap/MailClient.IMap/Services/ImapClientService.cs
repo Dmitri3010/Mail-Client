@@ -1,22 +1,22 @@
 ﻿using AutoMapper;
-using MailClient.IMap.Interfaces;
-using MailClient.IMap.Models;
+using MailClient.Imap.Interfaces;
+using MailClient.Imap.Models;
 using S22.Imap;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MailClient.IMap.Services {
-    public class ClientService : IClientService {
+namespace MailClient.Imap.Services {
+    public class ImapClientService : IClientService {
         private readonly IMapper _mapper;
 
-        private readonly AuthService _authService;
+        private readonly ImapAuthService _authService;
         private readonly List<MailService> _mailServices;
 
         private MailService _currentMailService;
 
-        public ClientService(IMapper mapper) {
+        public ImapClientService(IMapper mapper) {
             _mapper = mapper;
-            _authService = new AuthService();
+            _authService = new ImapAuthService();
             _mailServices = new List<MailService>();
         }
 
@@ -27,7 +27,7 @@ namespace MailClient.IMap.Services {
             return mailService;
         }
 
-        public ApplicationUser User => _currentMailService.User;
+        public ImapUser User => _currentMailService.User;
 
         public bool IsAnyUserLoggedIn() {
             return _authService.IsAnyUserLoggedIn();
@@ -37,7 +37,7 @@ namespace MailClient.IMap.Services {
             return _authService.GetUsernamesOfAllUsersLoggedIn();
         }
 
-        public ApplicationUser GetApplicationUserProfile(string username) {
+        public ImapUser GetApplicationUserProfile(string username) {
             return _authService.GetApplicationUserProfile(username);
         }
 

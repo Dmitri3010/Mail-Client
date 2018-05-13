@@ -1,10 +1,10 @@
-﻿using MailClient.IMap.Models;
+﻿using MailClient.Imap.Models;
 using S22.Imap;
 using System.Collections.Generic;
 
-namespace MailClient.IMap.Interfaces {
+namespace MailClient.Imap.Interfaces {
     public interface IMailService {
-        ApplicationUser User { get; }
+        ImapUser User { get; }
 
         List<MailModel> GetMessages(SearchCondition searchCondition);
 
