@@ -1,22 +1,21 @@
 ﻿using AutoMapper;
-using MailClient.IMap.Interfaces;
-using MailClient.IMap.Models;
+using MailClient.Imap.Interfaces;
+using MailClient.Imap.Models;
 using S22.Imap;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 
-namespace MailClient.IMap.Services
+namespace MailClient.Imap.Services
 {
     public class MailService : IMailService
     {
         private readonly IMapper _mapper;
-        private readonly ApplicationUser _user;
+        private readonly ImapUser _user;
 
-        public ApplicationUser User => _user;
+        public ImapUser User => _user;
 
-        public MailService(IMapper mapper, ApplicationUser user)
+        public MailService(IMapper mapper, ImapUser user)
         {
             _user = user;
             _mapper = mapper;
@@ -24,8 +23,8 @@ namespace MailClient.IMap.Services
 
         public List<MailModel> GetMessages(SearchCondition searchCondition)
         {
-            var uids = _user.ImapClient.Search(searchCondition);
-            var messages = _user.ImapClient.GetMessages(uids);
+            var uids = _user.Client.Search(searchCondition);
+            var messages = _user.Client.GetMessages(uids);
             return _mapper.Map<List<MailMessage>, List<MailModel>>(messages.ToList());
         }
 

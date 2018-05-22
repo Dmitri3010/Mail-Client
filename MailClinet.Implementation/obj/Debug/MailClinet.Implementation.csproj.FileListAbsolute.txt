@@ -1,0 +1,6 @@
+D:\Projects\Mail-Client\MailClinet.Implementation\bin\Debug\MailClinet.Implementation.dll
+D:\Projects\Mail-Client\MailClinet.Implementation\bin\Debug\MailClinet.Implementation.pdb
+D:\Projects\Mail-Client\MailClinet.Implementation\obj\Debug\MailClinet.Implementation.csprojResolveAssemblyReference.cache
+D:\Projects\Mail-Client\MailClinet.Implementation\obj\Debug\MailClinet.Implementation.csproj.CoreCompileInputs.cache
+D:\Projects\Mail-Client\MailClinet.Implementation\obj\Debug\MailClinet.Implementation.dll
+D:\Projects\Mail-Client\MailClinet.Implementation\obj\Debug\MailClinet.Implementation.pdb

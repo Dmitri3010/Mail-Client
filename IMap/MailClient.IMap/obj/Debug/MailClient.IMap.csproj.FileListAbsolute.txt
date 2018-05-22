@@ -18,3 +18,13 @@ D:\Projects\Mail-Client\MailClient.IMap\obj\Debug\MailClient.IMap.dll
 D:\Projects\Mail-Client\MailClient.IMap\obj\Debug\MailClient.IMap.pdb
 D:\Projects\Mail-Client\MailClient.IMap\bin\Debug\AutoMapper.dll
 D:\Projects\Mail-Client\MailClient.IMap\bin\Debug\S22.Imap.dll
+D:\Projects\Mail-Client\IMap\MailClient.IMap\obj\Debug\MailClient.IMap.csprojResolveAssemblyReference.cache
+D:\Projects\Mail-Client\IMap\MailClient.IMap\obj\Debug\MailClient.IMap.csproj.CoreCompileInputs.cache
+D:\Projects\Mail-Client\IMap\MailClient.IMap\obj\Debug\MailClient.IMap.dll
+D:\Projects\Mail-Client\IMap\MailClient.IMap\obj\Debug\MailClient.IMap.pdb
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\MailClient.IMap.dll
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\MailClient.IMap.pdb
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\MailClinet.Implementation.dll
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\MailClinet.Implementation.pdb
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\AutoMapper.xml
+D:\Projects\Mail-Client\IMap\MailClient.IMap\bin\Debug\S22.Imap.xml

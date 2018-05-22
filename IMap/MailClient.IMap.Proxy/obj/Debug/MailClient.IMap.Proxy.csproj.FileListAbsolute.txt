@@ -30,3 +30,5 @@ D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\obj\Debug\MailClient.IMap.Pro
 D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\obj\Debug\MailClient.IMap.Proxy.csproj.CoreCompileInputs.cache
 D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\obj\Debug\MailClient.IMap.Proxy.dll
 D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\obj\Debug\MailClient.IMap.Proxy.pdb
+D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\bin\Debug\MailClinet.Implementation.dll
+D:\Projects\Mail-Client\IMap\MailClient.IMap.Proxy\bin\Debug\MailClinet.Implementation.pdb
